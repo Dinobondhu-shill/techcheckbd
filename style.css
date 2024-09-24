@@ -37,4 +37,45 @@ nav ul li a:hover{
   text-decoration: underline;
   color: #5be9c5;
 }
+main{
+  margin-top: 40px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.hero{
+  position: relative;
+  height: 500px;
+  background-image: url("./images/banner.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-overly{
+  background: rgba(0, 0, 0, 0.5);
+  padding: 8px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #38c4a1;
+}
+.hero-overly h1{
 
+  font-size: 45px;
+  font-weight: 600;
+  padding: 15px 0;
+
+}
+.hero-overly h1 span{
+  color: white;
+}
+.hero-overly p{
+  width: 80%;
+  font-size: 18px;
+}
