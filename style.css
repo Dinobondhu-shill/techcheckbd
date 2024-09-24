@@ -1,54 +1,66 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 
-*{
-  margin:0 auto;
+* {
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;;
+  font-family: "Roboto", sans-serif;
+  ;
 }
-img{
+
+img {
   width: 100%;
   height: 100%;
   background-position: center;
 }
-ul, a, li{
+
+ul,
+a,
+li {
   text-decoration: none;
   color: black;
   list-style: none;
 }
-body{
+
+body {
   padding: 20px 50px;
 }
-.navbar{
+
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.navleft a{
+
+.navleft a {
   font-size: 30px;
   font-weight: 700;
 }
-nav ul{
+
+nav ul {
   display: flex;
   gap: 20px;
 }
-nav ul li a{
+
+nav ul li a {
   text-decoration: none;
   font-size: 20px;
   transition: color 0.3s ease, text-decoration 0.3s ease;
 }
-nav ul li a:hover{
+
+nav ul li a:hover {
   text-decoration: underline;
   color: #5be9c5;
 }
+
 .hamburger {
   display: none;
   font-size: 30px;
   cursor: pointer;
 }
 
-.hero{
+.hero {
   position: relative;
   height: 500px;
   width: 100%;
@@ -63,7 +75,8 @@ nav ul li a:hover{
   border-radius: 10px;
   overflow: hidden;
 }
-.hero-overly{
+
+.hero-overly {
   background: rgba(0, 0, 0, 0.5);
   padding: 8px;
   width: 100%;
@@ -75,141 +88,222 @@ nav ul li a:hover{
   text-align: center;
   color: #38c4a1;
 }
-.hero-overly h1{
+
+.hero-overly h1 {
 
   font-size: 45px;
   font-weight: 600;
   padding: 15px 0;
 
 }
-.hero-overly h1 span{
+
+.hero-overly h1 span {
   color: white;
 }
-.hero-overly p{
+
+.hero-overly p {
   width: 80%;
   color: white;
   font-size: 18px;
 }
+/* Modal style  */
+#openModalBtn{
+  padding: 10px 15px;
+  background-color: #067b60;
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #000;
+  cursor: pointer;
+}
+.modal {
+  display: none; 
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+.modal_content {
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 500px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: relative;
+
+}
+.modal_content p{
+  width: 100%;
+  text-align: center;
+  color: #38c4a1;
+  padding: 20px 0;
+}
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  color: red;
+  z-index: 1000;
+}
+
 /* gadgets section style  */
-#gadgets{
+#gadgets {
   margin: 40px 0;
   text-align: center;
 }
-#gadgets>h2{
+
+#gadgets>h2 {
   color: #38c4a1;
   font-size: 30px;
   text-decoration: underline;
   margin-bottom: 50px;
 }
-.gadget_body{
+
+.gadget_body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap:20px; 
+  gap: 20px;
 }
-.gadget_card{
+
+.gadget_card {
   padding: 10px 20px;
   border: 2px solid #38c4a1;
   border-radius: 15px;
   display: flex;
   flex-direction: column;
 }
-.gadget_body img{
+
+.gadget_body img {
   width: 350px;
   height: 200px;
   object-fit: cover;
   border-radius: 14px;
-margin: 10px auto;
+  margin: 10px auto;
 }
-.gadget_card>p{
-margin: 8px 0;
+
+.gadget_card>p {
+  margin: 8px 0;
 }
-.gadget_card span{
+
+.gadget_card span {
   color: #38c4a1;
 }
+
 /* large device responsive*/
-@media (min-width: 769px) and (max-width: 1020px)  {
-  body{
+@media (min-width: 769px) and (max-width: 1020px) {
+  body {
     padding: 10px;
   }
-  nav ul{
+
+  nav ul {
     gap: 12px;
   }
-  nav ul li a{
+
+  nav ul li a {
     font-size: 20px;
   }
-  .hero{
+
+  .hero {
     width: 100%;
   }
-  .hero-overly h1{
+
+  .hero-overly h1 {
     padding: 5px 0;
     font-size: 35px;
-  
+
   }
-  .hero-overly p{
+
+  .hero-overly p {
     width: 80%;
   }
-  .gadget_body{
+
+  .gadget_body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap:15px; 
+    gap: 15px;
   }
-  .gadget_card{
+
+  .gadget_card {
     padding: 10px;
   }
-  .gadget_body img{
+
+  .gadget_body img {
     width: 280px;
     height: 200px;
   }
-  
+
 }
+
 /* medium device responsive */
-@media (min-width: 469px) and (max-width: 768px)  {
-  body{
+@media (min-width: 469px) and (max-width: 768px) {
+  body {
     padding: 10px 20px;
   }
-  nav ul{
+
+  nav ul {
     gap: 10px;
   }
-  nav ul li a{
+
+  nav ul li a {
     font-size: 18px;
   }
-  .hero{
+
+  .hero {
     width: 100%;
   }
-  .hero-overly h1{
+
+  .hero-overly h1 {
     padding: 5px 0;
     font-size: 25px;
-  
+
   }
-  .hero-overly p{
+
+  .hero-overly p {
     width: 95%;
   }
-  .gadget_body{
+
+  .gadget_body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap:10px; 
+    gap: 10px;
   }
-  .gadget_card{
+
+  .gadget_card {
     padding: 5px 10px;
   }
-  .gadget_body img{
+
+  .gadget_body img {
     width: 250px;
     height: 200px;
   }
-  
+
 }
+
 /* mobile device responsive  */
 @media (max-width:468px) {
-  body{
+  body {
     padding: 5px;
   }
-  .navright ul{
+
+  .navright ul {
     display: none;
   }
+
   .hamburger {
     display: block;
     font-size: 30px;
   }
+
   .navright ul.active {
     display: flex;
     flex-direction: column;
@@ -223,20 +317,24 @@ margin: 8px 0;
     padding: 5px 8px;
     border-radius: 10px;
   }
-  .hero{
+
+  .hero {
     width: 100%;
   }
-  .hero-overly h1{
+
+  .hero-overly h1 {
     padding: 5px 0;
     font-size: 25px;
-  
+
   }
-  .hero-overly p{
+
+  .hero-overly p {
     width: 95%;
   }
-  .gadget_body{
+
+  .gadget_body {
     display: grid;
     grid-template-columns: 1fr;
-    gap:20px; 
+    gap: 20px;
   }
 }
