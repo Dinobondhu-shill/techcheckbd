@@ -42,6 +42,11 @@ nav ul li a:hover{
   text-decoration: underline;
   color: #5be9c5;
 }
+.hamburger {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
 
 .hero{
   position: relative;
@@ -125,10 +130,27 @@ margin: 8px 0;
 /* responsive using media query */
 @media (max-width:460px) {
   body{
-    padding: 10px;
+    padding: 5px;
   }
-  .navright{
+  .navright ul{
     display: none;
+  }
+  .hamburger {
+    display: block;
+    font-size: 30px;
+  }
+  .navright ul.active {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 15px;
+    position: absolute;
+    top: 10;
+    right: 10;
+    z-index: 10;
+    background-color: #5fb8d3;
+    padding: 5px 8px;
+    border-radius: 10px;
   }
   .hero{
     width: 100%;
