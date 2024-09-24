@@ -7,6 +7,11 @@
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;;
 }
+img{
+  width: 100%;
+  height: 100%;
+  background-position: center;
+}
 ul, a, li{
   text-decoration: none;
   color: black;
@@ -37,11 +42,7 @@ nav ul li a:hover{
   text-decoration: underline;
   color: #5be9c5;
 }
-main{
-  margin-top: 40px;
-  border-radius: 10px;
-  overflow: hidden;
-}
+
 .hero{
   position: relative;
   height: 500px;
@@ -52,6 +53,9 @@ main{
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 40px;
+  border-radius: 10px;
+  overflow: hidden;
 }
 .hero-overly{
   background: rgba(0, 0, 0, 0.5);
@@ -77,5 +81,36 @@ main{
 }
 .hero-overly p{
   width: 80%;
+  color: white;
   font-size: 18px;
+}
+/* gadgets section style  */
+#gadgets{
+  margin: 40px 0;
+  text-align: center;
+}
+#gadgets>h2{
+  color: #38c4a1;
+  font-size: 30px;
+  text-decoration: underline;
+  margin-bottom: 50px;
+}
+.gadget_body{
+  display: flex;
+  gap: 20px;
+  text-align: start;
+  
+}
+.gadget_card{
+  padding: 5px 20px;
+  border: 2px solid #38c4a1;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.gadget_body img{
+  width: 300px;
+  height: 200px;
+  border-radius: 14px;
+margin: 0 auto;
 }
