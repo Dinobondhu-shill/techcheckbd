@@ -126,9 +126,80 @@ margin: 8px 0;
 .gadget_card span{
   color: #38c4a1;
 }
-
-/* responsive using media query */
-@media (max-width:460px) {
+/* large device responsive*/
+@media (min-width: 769px) and (max-width: 1020px)  {
+  body{
+    padding: 10px;
+  }
+  nav ul{
+    gap: 12px;
+  }
+  nav ul li a{
+    font-size: 20px;
+  }
+  .hero{
+    width: 100%;
+  }
+  .hero-overly h1{
+    padding: 5px 0;
+    font-size: 35px;
+  
+  }
+  .hero-overly p{
+    width: 80%;
+  }
+  .gadget_body{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:15px; 
+  }
+  .gadget_card{
+    padding: 10px;
+  }
+  .gadget_body img{
+    width: 280px;
+    height: 200px;
+  }
+  
+}
+/* medium device responsive */
+@media (min-width: 469px) and (max-width: 768px)  {
+  body{
+    padding: 10px 20px;
+  }
+  nav ul{
+    gap: 10px;
+  }
+  nav ul li a{
+    font-size: 18px;
+  }
+  .hero{
+    width: 100%;
+  }
+  .hero-overly h1{
+    padding: 5px 0;
+    font-size: 25px;
+  
+  }
+  .hero-overly p{
+    width: 95%;
+  }
+  .gadget_body{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap:10px; 
+  }
+  .gadget_card{
+    padding: 5px 10px;
+  }
+  .gadget_body img{
+    width: 250px;
+    height: 200px;
+  }
+  
+}
+/* mobile device responsive  */
+@media (max-width:468px) {
   body{
     padding: 5px;
   }
